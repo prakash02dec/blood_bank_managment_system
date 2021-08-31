@@ -11,13 +11,12 @@ void blood_sample(){
     std::cout<< "============================================================================================="<<std::endl;
     std::cout<<std::endl;
         
-        while (!in_file.eof())
+        while (!in_file.eof() && in_file)
         {
 
             user donor_info;
             in_file >> donor_info.name >> donor_info.age >> donor_info.weight >> donor_info.health_ill_status 
             >> donor_info.blood_group >> donor_info.amount_of_blood>>donor_info.date ;
-            // in_file.read((char*)&donor_info, sizeof(user));
 
             std::string blood_group_sample {} ;
             std::cout << "\nEnter the Blood Sample you want to check for its availability : ";

@@ -4,12 +4,13 @@
 
 
 void hospital::display() const{
-    std::cout << "#####################################" << std::endl<<std::endl;
+    std::cout <<std::endl;
+    std::cout << "#####################################";
     std::cout << "\nHospital name : "<<hospital_name;
     std::cout << "\nHospital license id : " << license_id;
     std::cout << "\nRequested Blood group : "<<blood_group;
     std::cout << "\nRequested Quantity (L) : "<<amount_of_blood;
-    std::cout << "######################################" << std::endl;
+    std::cout <<std::endl<< "######################################" << std::endl;
 }
 
 void hospital::hospital_request(){
@@ -24,7 +25,7 @@ void hospital::hospital_request(){
   std::cin>>info.license_id;
   std::cout<<"\nRequested Blood group :"<<std::endl;
   std::cin>>info.blood_group;
-  std::cout<<"\nRequested Quantity (L):";
+  std::cout<<"\nRequested Quantity (ml):";
   std::cin>>info.amount_of_blood;
 
   std::cout<<"\nThanks for the details, your request will shortly be approved by the Bank"<<std::endl;

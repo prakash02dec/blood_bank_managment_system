@@ -53,7 +53,7 @@ void user::registration(){
 
     {
         std::cout<<"DO YOU AGREE TO SUMBMIT DETAIL FOR REGISTRATION"<<std::endl;
-        std::string response;
+        std::string response {};
         std::cin>>response;
         if(response == "no" || response == "NO" )
         return ;

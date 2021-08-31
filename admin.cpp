@@ -14,7 +14,7 @@ void admin::menu(){
     std::cout<< "4. Exit" <<std::endl<<std::endl;
 
     std::cout<< "Select an option to perform an operation:";
-    int response;
+    int response {};
     std::cin>>response;
         switch(response)
         {
@@ -54,7 +54,7 @@ void admin::donor_application(){
     std::ifstream in_file;
     in_file.open("data/new_donor.txt" , std::ios::in);  
     user donor_apps;       
-    while(!in_file.eof())
+    while(!in_file.eof() && in_file)
     {
         
 
@@ -69,7 +69,7 @@ void admin::donor_application(){
         std::cout << "\nQuantity :" << donor_apps.amount_of_blood;
         std::cout << "\n\n\n1. Accept" << std::endl<< "2. Reject" << std::endl;
         std::cout << "choose the option :";
-        int response;
+        int response {};
         std::cin >> response;
         if (response == 1)
         {
@@ -81,7 +81,6 @@ void admin::donor_application(){
             out_file.open("data/accept.txt", std::ios::app);
             out_file<< donor_apps.name << std::endl << donor_apps.age << std::endl << donor_apps.weight << std::endl << donor_apps.health_ill_status 
             << std::endl << donor_apps.blood_group << std::endl << donor_apps.amount_of_blood << std::endl <<donor_apps.date;
-            // out_file.write((char*)&donor_apps, sizeof(user));
             out_file.close();
             }
         else if (response == 2)
@@ -106,7 +105,7 @@ void admin::blood_sample_list(){
     std::cout << "=========================================ALL BLODD SAMPLE=====================================" << std::endl;
     std::cout<< "============================================================================================="<<std::endl;
     
-    while (!in_file.eof())
+    while (!in_file.eof() && in_file)
     {
         user donor_info;
         in_file >> donor_info.name >> donor_info.age >> donor_info.weight >> donor_info.health_ill_status 
@@ -134,7 +133,7 @@ void admin::hospital_manage()
     std::cout << "3. Delete" << std::endl<<std::endl;
     
     std::cout << "Select an option :" ;
-    int response;
+    int response {};
     std::cin >> response;
     switch (response)
     {
@@ -145,7 +144,7 @@ void admin::hospital_manage()
             std::ifstream in_file;
             in_file.open("data/hospitals.txt" , std::ios::in );
             hospital info;
-            while (!in_file.eof())
+            while (!in_file.eof() && in_file)
                 {
                     in_file >> info.hospital_name >> info.license_id >> info.blood_group >> info.amount_of_blood ;
                     
@@ -161,7 +160,7 @@ void admin::hospital_manage()
             std::cout << "=====================================UPDATE HOSPITAL REQUEST=================================" << std::endl;
             std::cout << "============================================================================================="<< std::endl;
             
-            std::string id;          
+            std::string id {};          
             std::cout<< "\nEnter the Hospital id you want to update : ";
             std::cin >> id;
             bool status {false};
@@ -170,7 +169,7 @@ void admin::hospital_manage()
             std::ofstream out_file;
             out_file.open("data/temp.txt", std::ios::out);
             hospital info;
-            while (!in_file.eof())
+            while (!in_file.eof() && in_file)
             {
                 
                 in_file >> info.hospital_name >> info.license_id  >> info.blood_group >> info.amount_of_blood ;
@@ -204,7 +203,7 @@ void admin::hospital_manage()
             std::cout << "=====================================UPDATE HOSPITAL REQUEST=================================" << std::endl;
             std::cout << "**************************************************"<< std::endl;
 
-            std::string id;          
+            std::string id {};          
             std::cout<< "\nEnter the Hospital id you want to update : ";
             std::cin >> id;
             bool status {false};
@@ -213,7 +212,7 @@ void admin::hospital_manage()
             std::ofstream out_file;
             out_file.open("data/temp.txt", std::ios::out);
              hospital info;
-            while (!in_file.eof())
+            while (!in_file.eof() && in_file)
             {
                
                 in_file >> info.hospital_name >> info.license_id  >> info.blood_group  >> info.amount_of_blood ;
