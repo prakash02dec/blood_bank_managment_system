@@ -88,6 +88,8 @@ CMakeFiles/BBMS.dir/hospital.cpp.obj: \
  c:\mingw\include\stdio.h \
  c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\cerrno \
  c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\bits\basic_string.tcc \
+ C:\Users\praka\Desktop\blood_bank_managment_system\admin.hpp \
+ C:\Users\praka\Desktop\blood_bank_managment_system\user.hpp \
  c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\iostream \
  c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\ostream \
  c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\ios \

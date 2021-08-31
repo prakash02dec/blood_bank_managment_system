@@ -5,10 +5,12 @@
 #include<string>
 #include<iostream>
 class user{
-    public:
+    friend void blood_sample();
+    friend class admin;
     int age , weight , amount_of_blood;
     std::string  name, health_ill_status , blood_group ,date;
     
+    public:
 
     user(int age=18 , int weight=40 , int amount_of_blood=500,
     std::string name="NONE", std::string health_ill_status="NO" , std::string blood_group="o+" ,std::string date="DD/MM/YYYY")

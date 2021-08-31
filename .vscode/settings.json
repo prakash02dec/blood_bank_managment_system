@@ -110,5 +110,19 @@
         "memory_resource": "cpp",
         "numeric": "cpp",
         "random": "cpp"
+    },
+    "debug.terminal.clearBeforeReusing": true,
+    "cmake.configureSettings": {
+    
+    },
+    "cmake.statusbar.advanced": {
+  
+    },
+    "terminal.integrated.env.windows": {
+    
+    },
+    "terminal.explorerKind": "external",
+    "cmake.debugConfig": {
+        "externalConsole": true
     }
 }
